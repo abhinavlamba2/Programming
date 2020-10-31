@@ -23,7 +23,6 @@ int main(int argc, char **argv)
     //basic check of the arguments
 
     //additional checks can be inserted
-
     if (argc != 2)
     {
 
@@ -31,7 +30,10 @@ int main(int argc, char **argv)
 
         exit(1);
     }
-
+    else 
+    {
+        cout << argc;
+    }
     //Create a socket for the client
 
     //If sd<0 there was an error in the creation of the socket
@@ -46,7 +48,7 @@ int main(int argc, char **argv)
 
     //Creation of the socket
 
-    memset(&servaddr, 0, sizeof(servaddr));
+    memset(&servaddr,  0, sizeof(servaddr));
 
     servaddr.sin_family = AF_INET;
 
@@ -114,7 +116,7 @@ int main(int argc, char **argv)
     printf("Received content length:%d\n",strlen(file_buffer));
     printf("%s\n",file_buffer);
 
-    fp = fopen("received_file.txt", "w");
+    fp = fopen("received.txt", "w");
     fputs(file_buffer, fp);
     fclose(fp);
     close(sd);
