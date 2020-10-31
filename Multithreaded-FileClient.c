@@ -1,3 +1,4 @@
+#include <bits/stdc++.h> // Used in Cpp compiler
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/types.h>
