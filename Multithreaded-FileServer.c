@@ -126,7 +126,7 @@ void *body(int *arg)
 
   int sd;
 
-  while (1)
+  while (true)
   {
 
     pthread_mutex_lock(&m_acc);
@@ -152,8 +152,8 @@ int connectbody()
   int base_sd2;
 
   struct sockaddr_in c_add, servaddr;
-
-  if ((base_sd2 = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+  int p = 0;
+  if ((base_sd2 = socket(AF_INET, SOCK_STREAM, 0)) < p)
   {
 
     perror("Problem in creating the socket");
@@ -198,7 +198,7 @@ int main(int argc, char **argv)
   } 
   //accepting the maximum queud connections
 
-  pthread_t t[10];
+  pthread_t t[4];
 
   struct sockaddr_in c_add;
 
