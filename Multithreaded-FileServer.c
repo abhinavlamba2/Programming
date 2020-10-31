@@ -7,9 +7,9 @@
 #include <unistd.h>
 
 #define MAXLINE 4096 /*max text line length*/
-#define SERV_PORT 3000 /*port*/
+#define SERV_PORT 4000 /*port*/
 #define LISTENQ 8 /*maximum number of client connections*/
-
+#define AVAI_PORT 8000 /*use this port when previous port is unavailable*/
 pthread_mutex_t m_acc;
 
 char buf[MAXLINE];
